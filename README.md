@@ -26,5 +26,5 @@ Steps:
 
 As the next task, the required data is needed to extract from the QChem output files and then calculate further chemical properties. For these calculations, previously calculated data for fragments is also needed. (ex: cp_homo.dat, cp_lumo.dat, cocp_homo.dat, cocp_lumo.dat, h_charge.dat) 
 
-Geometry optimaization calculations can be performed using
+Geometry optimaization calculations can be performed using "cocp_frag_opt.in" and "cp_frag_opt.in" for CoCpOH and Cp fragments. Then cp_homo.dat, cp_lumo.dat, cocp_homo.dat, cocp_lumo.dat
 
