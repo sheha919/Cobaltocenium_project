@@ -22,3 +22,7 @@ Steps:
 * Do any required changes in rem/pcm//basis set/charge/multiplicity in corresponding data files or di_input_generator.py (rem.dat, pcm.dat, basis.dat, "char" or "multi" variables in di_input_generator.py)
 * Run di_input_generator.py
 
+**Guidlines to data extraction, property calculation and data analysis**
+
+As the next task, the required data is needed to extract from the QChem output files and then calculate further chemical properties. For these calculations, previously calculated data for fragments is also needed. (ex: )
+
