@@ -1,0 +1,30 @@
+$molecule
+0 1
+C       -0.004174     -0.016374      0.417523
+C       -0.004174     -0.016374      3.189884
+C       -0.004174     -1.216842      1.110614
+C       -0.004174      1.184093      1.110613
+C       -0.004174      1.184094      2.496794
+C       -0.004174     -1.216841      2.496794
+H       -0.004174     -2.166006      0.562614
+H       -0.004174      2.133257      0.562613
+H       -0.004174      2.133258      3.044794
+H       -0.004174     -2.166005      3.044795
+H       -0.004174     -0.016374      4.285884
+##attach the substituent group to the above benzene geometry
+##always include the coordinates of substituents after the coordinates of benzene 
+$end
+
+$rem
+   MEM_total           20000
+   MEM_static          5000
+   METHOD              B3LYP
+   DFT_D               D3_ZERO
+   BASIS               6-31g**
+   unrestricted        false
+   SCF_GUESS           sad
+   JOBTYPE             opt
+   MAX_SCF_CYCLES      1000
+   SCF_CONVERGENCE     8
+   GEOM_OPT_MAX_CYCLES 500
+$end

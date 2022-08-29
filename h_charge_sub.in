@@ -1,0 +1,18 @@
+$molecule
+0 1
+###insert the geometry of substituted benzene
+###always define the coordinates of benzene first and then define the coordinates of the substituent
+$end
+
+$rem
+   MEM_total           20000
+   MEM_static          5000
+   METHOD              B3LYP
+   BASIS               6-31g*
+   unrestricted        false
+   SCF_GUESS           sad
+   JOBTYPE             sp
+   MAX_SCF_CYCLES      1000
+   SCF_CONVERGENCE     5
+   HIRSHFELD           true
+$end
