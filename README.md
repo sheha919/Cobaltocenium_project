@@ -8,3 +8,8 @@ As the next step, I wanted to expand the data set with every possible di-substit
 * data extraction from QChem output files
 * property calculation and data analysis
 
+This is the procedure need to follow to add a new substituent
+
+Guidlines to generate input files
+*Optimize the geometry of mono-substituted cobaltocenium with new substituent group. (The input) 
+
