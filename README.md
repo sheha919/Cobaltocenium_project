@@ -24,14 +24,19 @@ Steps:
 
 **Guidlines to data extraction, property calculation and data analysis**
 
-As the next task, the required data is needed to extract from the QChem output files and then calculate further chemical properties. For these calculations, previously calculated data for fragments is also needed. (ex: cp_homo.dat, cp_lumo.dat, cocp_homo.dat, cocp_lumo.dat, h_charge.dat) 
+* As the next task, the required data is needed to extract from the QChem output files and then calculate further chemical properties. For these calculations, previously calculated data for fragments is also needed. (ex: cp_homo.dat, cp_lumo.dat, cocp_homo.dat, cocp_lumo.dat, h_charge.dat) 
 
-Geometry optimaization calculations can be performed using "cocp_frag_opt.in" and "cp_frag_opt.in" for CoCpOH and Cp fragments. Then following data files can be extracted using "frag_extract.py"
-* Energy of substituted CoCpOH fragment:                                                cocp.dat
-* Energy of substituted Cp fragment:                                                    cp.dat
-* Energy of highest occupied molecular orbital (HOMO) for substituted CoCpOH fragment:  cocp_homo.dat
-* Energy of lowest unoccupied molecular orbital (LUMO) for substituted CoCpOH fragment: cocp_lumo.dat
-* Energy of HOMO for substituted Cp fragment:                                           cp_homo.dat
-* Energy of LUMO for substituted Cp fragment:                                           cp_lumo.dat
+* Geometry optimaization calculations can be performed using "cocp_frag_opt.in" and "cp_frag_opt.in" for CoCpOH and Cp fragments. Then following data files can be extracted using "frag_extract.py"
+  * Energy of substituted CoCpOH fragment:                                                cocp.dat
+  * Energy of substituted Cp fragment:                                                    cp.dat
+  * Energy of highest occupied molecular orbital (HOMO) for substituted CoCpOH fragment:  cocp_homo.dat
+  * Energy of lowest unoccupied molecular orbital (LUMO) for substituted CoCpOH fragment: cocp_lumo.dat
+  * Energy of HOMO for substituted Cp fragment:                                           cp_homo.dat
+  * Energy of LUMO for substituted Cp fragment:                                           cp_lumo.dat
+  
+ * For the Hirshfeld charge calculation;
+    * Create the input file for geometry optimization of substituted benzene using "h_charge_opt.in"
+    * Perfom the Hirshfeld charge calculation by adding the optimized geometry to "h_charge_sub.in"
+    * Use "h_charge_calculator.py" to calculate the sum of Hirshfeld charge on C<sub>6</sub>H<sub>5</sub> for each substituent and generate the "h_charge.dat" file
 
 
