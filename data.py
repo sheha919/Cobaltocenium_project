@@ -44,6 +44,8 @@ r=np.empty(len(cocp2_der))
 out_path='path2out_files'   #define the path to QChem output files
 xyz_path='path2xyz_files'   #define the paths to extracted xyz files
 
+#extracting optimized geometry, energy, HOMO energy, LUMO energy and dipole moment of the di-substituted complex
+
 for i in range(len(cocp2_der)):
         file=open(os.path.join(out_path,cocp2_der[i]+'.out'),"r")
         data=file.readlines()
