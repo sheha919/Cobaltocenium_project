@@ -11,5 +11,5 @@ As the next step, I wanted to expand the data set with every possible di-substit
 This is the procedure need to follow to add a new substituent
 
 Guidlines to generate input files
-*Optimize the geometry of mono-substituted cobaltocenium with new substituent group. (The input) 
+*Optimize the geometry of mono-substituted cobaltocenium with the new substituent group. (input file: Cobaltocenium_project/mono_sub_opt_sample.in) 
 
