@@ -46,10 +46,10 @@ for i in range(len(der)):
         write_file.close()
         file.close()
 
-energy_file=open('energy_frag.dat', "w")
-dipole_file=open('dipole_frag.dat',"w")
-homo_file=open('homo_frag.dat',"w")
-lumo_file=open('lumo_frag.dat',"w")
+energy_file=open('frag.dat', "w")
+dipole_file=open('frag_dipole.dat',"w")
+homo_file=open('frag_homo.dat',"w")
+lumo_file=open('frag_lumo.dat',"w")
 for i in range(len(der)):
 	energy_file.write(der[i]+ '   ' +str(energy[i])+'\n')
 	dipole_file.write(der[i]+ '   ' +str(dipole[i])+'\n')
