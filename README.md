@@ -12,13 +12,13 @@ This is the procedure need to follow to add a new substituent;
 
 **Guidlines to generate input files**
 
-Here the QChem input files for di-substuted CoCp<sub>2</sub>OH are generating with a given substituent set. The xyz coordinates for di-substuted CoCp<sub>2</sub>OH are creating by;
+The QChem input files for di-substuted CoCp<sub>2</sub>OH are generating with a given substituent set. The xyz coordinates for di-substuted CoCp<sub>2</sub>OH are creating by;
 * one group is directly attaching to C15
 * second group is attaching to C4 with a coordination rotation through z axis
 
 Steps:
 * Optimize the geometry of mono-substituted cobaltocenium with the new substituent group. (input file: Cobaltocenium_project/mono_sub_opt_sample.in) 
 * Extract the xyz coordinates of optimized output files using "extract_subcor.py"
-* Do any required changes in rem/pcm//basis set/charge/multiplicity in corresponding data files or di_input_generator.py (rem.dat, pcm.dat, basis.dat, char or multi variables in di_input_generator.py)
+* Do any required changes in rem/pcm//basis set/charge/multiplicity in corresponding data files or di_input_generator.py (rem.dat, pcm.dat, basis.dat, "char" or "multi" variables in di_input_generator.py)
 * Run di_input_generator.py
 
