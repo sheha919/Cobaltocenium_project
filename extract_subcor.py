@@ -1,3 +1,4 @@
+#Extracting xyz coordinates of substituent groups
 import numpy as np
 
 d=np.empty(4)
