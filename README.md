@@ -13,8 +13,8 @@ This is the procedure need to follow to add a new substituent;
 **Guidlines to generate input files**
 
 The QChem input files for di-substuted CoCp<sub>2</sub>OH are generating with a given substituent set. The xyz coordinates for di-substuted CoCp<sub>2</sub>OH are creating by;
-* one group is directly attaching to C15
-* second group is attaching to C4 with a coordination rotation through z axis
+* one group is directly attaching to 14<sup> th </sup> atom (C) 
+* second group is attaching to 4<sup> th </sup> atom (C) with a coordination rotation through z axis
 
 Steps:
 * Optimize the geometry of mono-substituted cobaltocenium with the new substituent group. (input file: Cobaltocenium_project/mono_sub_opt_sample.in) 
