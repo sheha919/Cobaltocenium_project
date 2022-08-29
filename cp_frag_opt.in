@@ -1,0 +1,51 @@
+$molecule
+0 2
+#insert xy coordinates for Cp fragment
+$end
+
+$rem
+   MEM_total           20000
+   MEM_static          5000
+   METHOD              B3LYP
+   DFT_D               D3_ZERO
+   BASIS               6-31g**
+   SYMMETRY_IGNORE     1
+   unrestricted        true
+   SCF_GUESS           sad
+   JOBTYPE             opt
+   MAX_SCF_CYCLES      1000
+   SCF_CONVERGENCE     7
+   GEOM_OPT_MAX_CYCLES 1000
+   SOLVENT_METHOD      PCM              !include H2O solvent
+$end
+
+
+
+
+$pcm
+Theory          CPCM
+Method          SWIG
+Solver          Inversion
+HeavyPoints     194
+HPoints         194
+Radii           read
+vdwScale        1.2
+$end
+
+$solvent
+Dielectric      78.39
+$end
+
+
+$van_der_waals
+1
+1       1.2000
+6       1.9200
+7       1.5500
+8       1.5200
+9       1.5138
+15      1.8657
+16      1.8153
+17      1.7820
+35      1.8855
+$end
