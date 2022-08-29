@@ -11,6 +11,7 @@ As the next step, I wanted to expand the data set with every possible di-substit
 This is the procedure need to follow to add a new substituent;
 
 **Guidlines to generate input files**
+
 Here the QChem input files for di-substuted CoCp<sub>2</sub>OH are generating with a given substituent set. The xyz coordinates for di-substuted CoCp<sub>2</sub>OH are creating by;
 * one group is directly attaching to C15
 * second group is attaching to C4 with a coordination rotation through z axis
