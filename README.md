@@ -1,5 +1,5 @@
 # Stability of cobaltocenium derivatives 
-In this project, I investigate the stability of cobaltocenium derivatives (CoCp<sub>2</sub>OH) used in anion exchange membrane of alkaline fuel cells based on the bond dissociation energy (BDE). After an extensive analysis, I found that BDE can be predicted using few chemical properties of the fragments of cobaltocenium derivatives based on their substituents. Check out below publications for more information about the theory model and machine learning models that I introduced with my colleagues;
+In this project, I investigate the stability of cobaltocenium derivatives (CoCp<sub>2</sub>OH) used in anion exchange membrane of alkaline fuel cells based on the bond dissociation energy (BDE). After an extensive analysis, I found that BDE can be predicted using few chemical properties of the fragments of cobaltocenium derivatives based on its substituents. Check out following publications for more information about the theory model and machine learning models that introduced by myself and my colleagues;
 * https://pubs.acs.org/doi/10.1021/acs.jpca.1c10603
 * https://pubs.acs.org/doi/10.1021/acs.jctc.1c01201
 
@@ -22,6 +22,8 @@ Steps:
 * Do any required changes in rem/pcm//basis set/charge/multiplicity in corresponding data files or di_input_generator.py (rem.dat, pcm.dat, basis.dat, "char" or "multi" variables in di_input_generator.py)
 * Run di_input_generator.py
 
+**Guidlines to submit mutiple QChem files**
+
 **Guidlines to data extraction, property calculation and data analysis**
 
 * As the next task, the required data is needed to extract from the QChem output files and then calculate further chemical properties. For these calculations, previously calculated data for fragments is also needed. (ex: cp_homo.dat, cp_lumo.dat, cocp_homo.dat, cocp_lumo.dat, h_charge.dat) 
@@ -38,5 +40,7 @@ Steps:
     * Create the input file for geometry optimization of substituted benzene using "h_charge_opt.in"
     * Perfom the Hirshfeld charge calculation by adding the optimized geometry to "h_charge_sub.in"
     * Use "h_charge_calculator.py" to calculate the sum of Hirshfeld charge on C<sub>6</sub>H<sub>5</sub> for each substituent and generate the "h_charge.dat" file
+    
+  * Once all required data files are created, "data.py" can be used to calculate BDE and other chemical properties to di-substituted complexes. (Note: Do the necessary changes in data.py file as in the comments)
 
 
