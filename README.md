@@ -25,9 +25,10 @@ Steps:
 * Optimize the geometry of mono-substituted cobaltocenium with the new substituent group. (input file: Cobaltocenium_project/mono_sub_opt_sample.in) 
 * Extract the xyz coordinates of optimized output files using "extract_subcor.py"
 * Do any required changes in rem/pcm//basis set/charge/multiplicity in corresponding data files or di_input_generator.py (rem.dat, pcm.dat, basis.dat, "char" or "multi" variables in di_input_generator.py)
-* Run di_input_generator.py
+* Run "di_input_generator.py"
 
 **Guidlines to submit mutiple QChem files**
+*  Run "multi_cal.sh" file to submit the geometry optimization calculations in the serial manner. (It followes the list of di-substituted CoCp<sub>2</sub>OH in "der.dat" file which automatically generate by running the "di_input_generator.py" )
 
 **Guidlines to data extraction, property calculation and data analysis**
 
