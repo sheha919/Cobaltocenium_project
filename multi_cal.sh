@@ -1,5 +1,5 @@
 #!/bin/sh
-#SBATCH --job-name=multi_bde
+#SBATCH --job-name=multi_cal
 #SBATCH -o tt%j.log
 #SBATCH -e tt%j.err
 #SBATCH -n 5
