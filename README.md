@@ -34,7 +34,7 @@ Steps:
 
 * As the next task, the required data is needed to extract from the QChem output files and then calculate further chemical properties. For these calculations, previously calculated data for fragments is also needed. (ex: cp_homo.dat, cp_lumo.dat, cocp_homo.dat, cocp_lumo.dat, h_charge.dat) 
 
-* Geometry optimaization calculations can be performed using "cocp_frag_opt.in" and "cp_frag_opt.in" for CoCpOH and Cp fragments. Then following data files can be extracted using "frag_extract.py"
+* Geometry optimaization calculations can be performed using "cocp_frag_opt.in" and "cp_frag_opt.in" for CoCpOH and Cp fragments respectively. Then required data can be extracted to following data files using "frag_extract.py"
   * Energy of substituted CoCpOH fragment:                                                cocp.dat
   * Energy of substituted Cp fragment:                                                    cp.dat
   * Energy of highest occupied molecular orbital (HOMO) for substituted CoCpOH fragment:  cocp_homo.dat
@@ -47,6 +47,10 @@ Steps:
     * Perfom the Hirshfeld charge calculation by adding the optimized geometry to "h_charge_sub.in"
     * Use "h_charge_calculator.py" to calculate the sum of Hirshfeld charge on C<sub>6</sub>H<sub>5</sub> for each substituent and generate the "h_charge.dat" file
     
-  * Once all required data files are created, "data.py" can be used to calculate BDE and other chemical properties to di-substituted complexes. (Note: Do the necessary changes in data.py file as in the comments)
+  * Once all required data files are created, "data.py" can be used to calculate BDE and other chemical properties for di-substituted complexes. (Note: Do the necessary changes in data.py file as in the comments)
+
+The extracted data has published in Open Source Framework (OSF) and the link to the database is attached below;
+
+https://osf.io/6za8c/
 
 
