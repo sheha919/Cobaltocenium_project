@@ -1,4 +1,8 @@
 # Stability of cobaltocenium derivatives 
+
+- Author: Shehani Wetthasinghe
+- Last modified: 08/29/2022
+
 In this project, I investigate the stability of cobaltocenium derivatives (CoCp<sub>2</sub>OH) used in anion exchange membrane of alkaline fuel cells based on the bond dissociation energy (BDE). After an extensive analysis, I found that BDE can be predicted using few chemical properties of the fragments of cobaltocenium derivatives based on its substituents. 
 ![substituents](https://user-images.githubusercontent.com/50593017/187327244-749c48b3-b0bf-49ec-835e-14c6d2a8d145.png)
 
