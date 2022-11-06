@@ -1,16 +1,24 @@
-# Stability of cobaltocenium derivatives 
+# Predicting the stability of cobaltocenium derivatives 
 
-- Author: Shehani Wetthasinghe
-- Last modified: 08/29/2022
+Author: Shehani Wetthasinghe
 
-In this project, I investigate the stability of cobaltocenium derivatives (CoCp<sub>2</sub>OH) used in anion exchange membrane of alkaline fuel cells based on the bond dissociation energy (BDE). After an extensive analysis, I found that BDE can be predicted using few chemical properties of the fragments of cobaltocenium derivatives based on its substituents. 
+Last modified: 11/05/2022
+
+- According to the previous experimental work, cobaltocenium derivatives (CoCp<sub>2</sub>OH) are regarded as promising anion exchange membrane (AEM) components because of their excellent thermal and alkaline stability under operating conditions of fuel cells.
+- In this project,  I provide a useful guidance for experimentalists to find out the stable cobaltocenium derivatives by introducing a machine learning model. 
+- The stability of cobaltoceniums are studied based on the bond dissociation energy (BDE). 
+- After an extensive analysis, I found that BDE can be predicted using few chemical properties of the fragments of cobaltocenium derivatives based on its substituents.
+
+Here are the substituents used in this study:
 ![substituents](https://user-images.githubusercontent.com/50593017/187327244-749c48b3-b0bf-49ec-835e-14c6d2a8d145.png)
 
-Check out following publications for more information about the theory model and machine learning models that introduced by myself and my colleagues;
+Check out following publications for more information about the theory model;
 * https://pubs.acs.org/doi/10.1021/acs.jpca.1c10603
 * https://pubs.acs.org/doi/10.1021/acs.jctc.1c01201
 
-As the next step, I wanted to expand the data set with every possible di-substituted cobatocenium derivatives for 42 substituents. So here I share the python codes that I used for;
+
+## Data Generation
+I wanted to expand the data set with every possible di-substituted cobatocenium derivatives for 42 substituents. So here I share the python codes that I used for;
 * generating input files for QChem calculations
 * data extraction from QChem output files
 * property calculation and data analysis
@@ -57,4 +65,14 @@ The extracted data has published in Open Source Framework (OSF) and the link to 
 
 https://osf.io/6za8c/
 
+## Machine Learning Model
 
+**NOTE:**
+Before applying the machine learning techniquies, I removed derivatives below the DFT accuracy 3 kcal/mol of BDE.
+
+The following heat map illustrates the correlation between the features of fragments based on the generated data.
+
+![image](https://user-images.githubusercontent.com/50593017/200151745-c8868931-d0ca-43ce-9cb4-0f56d7663aa1.png)
+
+
+First, I tried out few regressin machine learning models with the default parameters.
