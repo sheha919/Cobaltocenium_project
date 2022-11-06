@@ -103,5 +103,8 @@ First, I tried out few regression machine learning models with the default param
 
 ![image](https://user-images.githubusercontent.com/50593017/200152219-c169a7a1-c24f-4a28-bf35-8c1a94d15d94.png)
 ![image](https://user-images.githubusercontent.com/50593017/200152258-160552ec-441f-4fe5-85f5-fb1acdb22192.png)
-![image![image](https://user-images.githubusercontent.com/50593017/200152252-5ff73667-8bf3-4e59-baec-fc742a012d91.png)
+![image](https://user-images.githubusercontent.com/50593017/200152252-5ff73667-8bf3-4e59-baec-fc742a012d91.png)
+
+### Recomendation
+- Acording to the performence of optimized models, bagged tree regression model is selected as the best ML model since it gained the highest R$^2$ score and lowest train and test RMSE scores.
 
