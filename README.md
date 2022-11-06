@@ -102,8 +102,8 @@ First, I tried out few regression machine learning models with the default param
 |Decision Tree|0\.982769|0\.595518|0\.867512|4\.246043|
 
 ![image](https://user-images.githubusercontent.com/50593017/200152219-c169a7a1-c24f-4a28-bf35-8c1a94d15d94.png)
-![image](https://user-images.githubusercontent.com/50593017/200152258-160552ec-441f-4fe5-85f5-fb1acdb22192.png)
-![image](https://user-images.githubusercontent.com/50593017/200152450-3cbdfa51-8f3b-4595-81e3-6efd1971b6d6.png)
+![image](https://user-images.githubusercontent.com/50593017/200152540-1429c05e-ee5c-49d0-8901-93e00b115bd1.png)
+![image](https://user-images.githubusercontent.com/50593017/200152522-4cac3af5-9f58-4484-98f7-9d25b16a1f88.png)
 
 ### Recomendation
 - Acording to the performence of optimized models, bagged tree regression model is selected as the best ML model since it gained the highest R<sup>2</sup> score and lowest train and test RMSE scores.
