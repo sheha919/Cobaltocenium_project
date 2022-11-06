@@ -74,5 +74,18 @@ The following heat map illustrates the correlation between the features of fragm
 
 ![image](https://user-images.githubusercontent.com/50593017/200151745-c8868931-d0ca-43ce-9cb4-0f56d7663aa1.png)
 
+First, I tried out few regression machine learning models with the default parameters. The following table shows their performence;
+|Model|Train R2|Test R2|Train RMSE \(kcal/mol\)|Test RMSE \(kcal/mol\)|
+|---|---|---|---|---|
+|Linear Regression|0\.459858|0\.400263|4\.857049|5\.170292|
+|Decision Tree|1|0\.500963|0|4\.716295|
+|Bagged Tree|0\.968559|0\.758548|1\.171838|3\.280576|
+|KNN|0\.699967|0\.428702|3\.619956|5\.046217|
+|Random Forest|0\.982086|0\.795065|0\.884542|3\.022334|
 
-First, I tried out few regressin machine learning models with the default parameters.
+![image](https://user-images.githubusercontent.com/50593017/200152014-b8e12650-6777-4b09-8cb1-fafc421f1c12.png)
+![image](https://user-images.githubusercontent.com/50593017/200152026-eacfac2c-0493-47d7-b8c5-50ee0fc4ee8e.png)
+![image](https://user-images.githubusercontent.com/50593017/200152031-68c122be-c68c-4947-a9b2-5fd3d0d87eb4.png)
+![image](https://user-images.githubusercontent.com/50593017/200152035-5d050ae3-cc14-49eb-8f10-b21d6690384c.png)
+![image](https://user-images.githubusercontent.com/50593017/200152043-e117e411-5c53-417d-a95e-c03f255b46c5.png)
+
