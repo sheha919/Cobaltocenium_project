@@ -92,8 +92,8 @@ First, I tried out few regression machine learning models with the default param
 ![image](https://user-images.githubusercontent.com/50593017/200152043-e117e411-5c53-417d-a95e-c03f255b46c5.png)
 
 - According to the train and test RMSE values of the models;
- - All models have overfitting issue and decision tree has the highest impact from the overfitting.
- - Out of these 5 models, the best performing random forest, bagged tree and  decision tree models were selected (based on the test R$^2$ score) to do further optimizations.
+  - All models have overfitting issue and decision tree has the highest impact from the overfitting.
+  - Out of these 5 models, the best performing random forest, bagged tree and  decision tree models were selected (based on the test R$^2$ score) to do further optimizations.
  
  The following table illustrates the performence of the models after tunning the hyperparameters and carring out the cross validation (folds = 5);
  
