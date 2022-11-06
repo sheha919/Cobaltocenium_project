@@ -4,6 +4,8 @@ Author: Shehani Wetthasinghe
 
 Last modified: 11/05/2022
 
+![afm_aem](https://user-images.githubusercontent.com/50593017/200152591-233aee11-a424-46b4-9a55-d0cfa8bcac7f.png)
+
 - According to the previous experimental work, cobaltocenium derivatives (CoCp<sub>2</sub>OH) are regarded as promising anion exchange membrane (AEM) components because of their excellent thermal and alkaline stability under operating conditions of fuel cells.
 - In this project,  I provide a useful guidance for experimentalists to find out the stable cobaltocenium derivatives by introducing a machine learning model. 
 - The stability of cobaltoceniums are studied based on the bond dissociation energy (BDE). 
