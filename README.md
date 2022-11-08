@@ -20,7 +20,7 @@ Check out following publications for more information about the theory model;
 
 
 ## Data Generation
-I wanted to expand the data set with every possible di-substituted cobatocenium derivatives for 42 substituents. So here I share the python codes that I used for;
+I generated the data set with every possible di-substituted cobatocenium derivatives for 42 substituents. So here I share the python codes that I used for;
 * generating input files for QChem calculations
 * data extraction from QChem output files
 * property calculation and data analysis
