@@ -84,29 +84,34 @@ First, I tried out few regression machine learning models with the default param
 |Bagged Tree|0\.968559|0\.758548|1\.171838|3\.280576|
 |KNN|0\.699967|0\.428702|3\.619956|5\.046217|
 |Random Forest|0\.982086|0\.795065|0\.884542|3\.022334|
+|SVG|0\.479298|0\.378495|4\.768846|5\.263284|
+|XG Boost|0\.905036|0\.844032|2\.036564|2\.636647|
 
 ![image](https://user-images.githubusercontent.com/50593017/200152014-b8e12650-6777-4b09-8cb1-fafc421f1c12.png)
 ![image](https://user-images.githubusercontent.com/50593017/200152026-eacfac2c-0493-47d7-b8c5-50ee0fc4ee8e.png)
 ![image](https://user-images.githubusercontent.com/50593017/200152031-68c122be-c68c-4947-a9b2-5fd3d0d87eb4.png)
 ![image](https://user-images.githubusercontent.com/50593017/200152035-5d050ae3-cc14-49eb-8f10-b21d6690384c.png)
 ![image](https://user-images.githubusercontent.com/50593017/200152043-e117e411-5c53-417d-a95e-c03f255b46c5.png)
+![image](https://user-images.githubusercontent.com/50593017/210457193-87d61b1a-4213-4dc0-a284-682f8d3decbf.png)
+![image](https://user-images.githubusercontent.com/50593017/210457210-532ce038-d598-4ad9-a041-d6a967bf9406.png)
 
-- According to the train and test RMSE values of the models;
-  - All models have an overfitting issue and decision tree has the highest impact from the overfitting.
-  - Out of these 5 models, the best performing random forest, bagged tree and  decision tree models were selected (based on the test R<sup>2</sup> score) to do further optimizations.
+- According to the train and test RMSE values for the models;
+  - all models have overfilling issue and decision tree has the highest overfittin problem.
+- Out of these 7 models, XG boost, random forest and bagged tree are selected based on the test R$^2$ score to do further optimizations.
  
  The following table illustrates the performence of the models after tunning the hyperparameters and carring out the cross validation (folds = 5);
  
 |Model|Train R2|Test R2|Train RMSE \(kcal/mol\)|Test RMSE \(kcal/mol\)|
 |---|---|---|---|---|
+|XG Boost|0\.986399|0\.845785|0\.770731|2\.621787|
 |Random Forest|0\.979996|0\.798638|0\.9347|2\.995871|
 |Bagged Tree|0\.980953|0\.801947|0\.912076|2\.971157|
-|Decision Tree|0\.982769|0\.595518|0\.867512|4\.246043|
 
-![image](https://user-images.githubusercontent.com/50593017/200152219-c169a7a1-c24f-4a28-bf35-8c1a94d15d94.png)
-![image](https://user-images.githubusercontent.com/50593017/200152540-1429c05e-ee5c-49d0-8901-93e00b115bd1.png)
-![image](https://user-images.githubusercontent.com/50593017/200152522-4cac3af5-9f58-4484-98f7-9d25b16a1f88.png)
+![image](https://user-images.githubusercontent.com/50593017/210457410-143e70a0-ce49-4846-ac13-142f5f54258e.png)
+![image](https://user-images.githubusercontent.com/50593017/210457442-d0795964-28ed-4efe-9ac6-ee690ac29092.png)
+![image](https://user-images.githubusercontent.com/50593017/210457461-2bfcc5df-81cd-4283-bd3e-3ff1ab2c5ec6.png)
+
 
 ### Recomendation
-- Acording to the performence of optimized models, bagged tree regression model is selected as the best ML model since it gained the highest R<sup>2</sup> score and lowest train and test RMSE scores.
+- Acording to the performence of optimized models, XG Boost regression model is selected as the best ML model since it gained the highest R<sup>2</sup> score and lowest train and test RMSE scores.
 
