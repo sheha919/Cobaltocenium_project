@@ -113,7 +113,8 @@ First, I tried out few regression machine learning models with the default param
 
 
 **- Acording to the performence of optimized models, XG Boost regression model is selected as the best ML model since it gained the highest R<sup>2</sup> score and lowest train and test RMSE scores.**
-**- But this model is suffering from overfitting, so here I tried few few deep laerning models to overcome the overfitting problem.**
+
+**- But this model is suffering from overfitting, so here I tried few few deep learning models to overcome the overfitting problem.**
 
 ## Neural Network Models
 Performence of the NN models
