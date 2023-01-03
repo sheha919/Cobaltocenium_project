@@ -133,7 +133,7 @@ Performence of the NN models
 
 ### Model 2
 - In this model, the number of nodes increased from 10 to 20 and add early stopping method with the patience level of 10.
-- According to R$^2$ scores, testing score is higher than the training score which is very good.
+- According to R<sup>2</sup> scores, testing score is higher than the training score which is very good.
 - But in MAE and RMSE scores, training score is slightly higher than the testing score.
 - So far, model 2 is the best model to predict BDE with the minimum overfitting.
 
@@ -149,7 +149,7 @@ Performence of the NN models
 ![image](https://user-images.githubusercontent.com/50593017/210458850-37673526-37ff-493a-b69a-40cb538e1927.png)
 
 ## Recomendations
-- Out of all ML models and NN models, model 2 is selected as best model because it showed the best performce (R$^2$ scors) with minimum overfitting.
+- Out of all ML models and NN models, model 2 is selected as best model because it showed the best performce (R<sup>2</sup> scores) with minimum overfitting.
 
 
 
