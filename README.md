@@ -150,6 +150,9 @@ Performence of the NN models
 
 ## Recomendations
 - Out of all ML models and NN models, model 2 is selected as best model because it showed the best performce (R<sup>2</sup> scores) with minimum overfitting.
-
+- According to the predicted results of every model, you can observe that the predictions made for the derivatives with actual BDE values greater than 30 kcal/mol (derivatives with electron donating groups) produced the higher error and it caused to decrease the testing scores of the models.
+- This is because, the number of highly stable derivatives (BDE > 30 kcal/mol) in the database is 32 out of 873 total data points and it is not sufficient
+to train the models to provide accurate predictions for stable derivatives.
+- Therefore, I recommend to add more derivatives with electron donating groups (BDE > 30 kcal/mol) to the database to enhance the accuracy of predictions.
 
 
