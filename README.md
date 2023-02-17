@@ -114,45 +114,16 @@ First, I tried out few regression machine learning models with the default param
 
 - **Acording to the performence of optimized models, XG Boost regression model is selected as the best ML model since it gained the highest R<sup>2</sup> score and lowest train and test RMSE scores.**
 
-- **But this model is suffering from overfitting, so here I tried few few deep learning models to overcome the overfitting problem.**
+- But this model is suffering from overfitting, so here I tried few few deep learning models to overcome the overfitting problem.
+- According to the predicted results of every optimized  model, it is observable that the predictions made for the derivatives with actual BDE values greater than 30 kcal/mol produced the higher error and it caused to decrease the testing scores of the models.
+- Therefore, analyzis of outliers is required.
+- The common outliers for all three optimized models were identified by calculating  $\lvert$ Actual BDE - Predicted BDE $\rvert$. Table \ref{tab:ouliers} and  the below figure shows the list top 9 outliers where $\lvert$ Actual BDE - Predicted BDE $\rvert$ $>$ 4 kcal/mol.
+![image](top9_outlier.png)
 
-## Neural Network Models
-Performence of the NN models
+- 7 out of 9 of these outliers consist with -CONH$_2$ substituent. So next, the distribution of -CONH$_2$ derivatives over input features were analyzed to determine whether it is detected as an outlier at the initial stage.
 
-|Model|Train R2|Test R2|Train RMSE \(kcal/mol\)|Test RMSE \(kcal/mol\)|
-|---|---|---|---|---|
-|Model1|0\.513425|0\.418722|4\.609922|5\.090102|
-|Model2|0\.77119|0\.771951|3\.161232|3\.18822|
-|Model3|0\.607288|0\.508566|4\.141482|4\.680232|
+![image](all_feat_out.png)
 
-### Model 1
-- Model 1 is too simple or trained for too few epochs to predict a dataset well. As the next step, I increased the complexity of the model.
-- According to the calculated scores, training scores are better than the testing scores which implies the overfitting.
-- So I just gave a try by making the model much complicated by increasing the number of nodes and epoches.
-- And also used the early stopping method to restrict over doing the epochs.
 
-### Model 2
-- In this model, the number of nodes increased from 10 to 20 and add early stopping method with the patience level of 10.
-- According to R<sup>2</sup> scores, testing score is higher than the training score which is very good.
-- But in MAE and RMSE scores, training score is slightly higher than the testing score.
-- So far, model 2 is the best model to predict BDE with the minimum overfitting.
-
-### Model 3
-- I introduced model 3 by doing further modifications to model 2  to have better predictions.
-- In model 3;
-    - increase number of layers
-    - increase number of nodes and applying "Dropout" to turn off some nodes during the training process to choose the correct number of nodes. This is a remedy for overfitting.
-    - As another solution for overfitting, L1 and L2 regularization is used
-
-![image](https://user-images.githubusercontent.com/50593017/210458680-3836ac4a-94a2-4e9a-b89d-84e064dbbca0.png)
-![image](https://user-images.githubusercontent.com/50593017/210458820-9b661d32-ca62-418e-96ad-e2fcce419dbf.png)
-![image](https://user-images.githubusercontent.com/50593017/210458850-37673526-37ff-493a-b69a-40cb538e1927.png)
-
-## Recomendations
-- Out of all ML models and NN models, model 2 is selected as best model because it showed the best performce (R<sup>2</sup> scores) with minimum overfitting.
-- According to the predicted results of every model, you can observe that the predictions made for the derivatives with actual BDE values greater than 30 kcal/mol (derivatives with electron donating groups) produced the higher error and it caused to decrease the testing scores of the models.
-- This is because, the number of highly stable derivatives (BDE > 30 kcal/mol) in the database is 32 out of 873 total data points and it is not sufficient
-to train the models to provide accurate predictions for stable derivatives.
-- Therefore, I recommend to add more derivatives with electron donating groups (BDE > 30 kcal/mol) to the database to enhance the accuracy of predictions.
 
 
