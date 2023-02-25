@@ -148,7 +148,7 @@ First, I tried out few regression machine learning models with the default param
 ## Conclusion
 - The optimized XG Boost can be recommnded as a potential machine learning model to predict the stability of new di-substituted CoCp<sub>2</sub>OH derivatives with the best accuracy.
 
-# Future work
+## Future work
 - The majority of (CO)NH₂ derivatives have higher BDE values with lower HOMO energies which implies that (CO)NH₂ stabilizes the complex by acting as electron withdrawing group. 
 - However, this observation appears to contradict our previous work and experimental results, which showed that electron-donating groups stabilize CoCp<sub>2</sub>OH derivatives. 
 - Therefore, the impact of (CO)NH₂ on the electronic structure of CoCp<sub>2</sub>OH is more complex than my initially thought. 
