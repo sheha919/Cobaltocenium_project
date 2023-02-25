@@ -132,6 +132,24 @@ First, I tried out few regression machine learning models with the default param
 - Based on the data presented in above plots, it is evident that (CO)NH₂ derivatives appear as significant outliers in the distribution of HOMO energy of the complex.
 - Due to the peculiar behavior of (CO)NH₂ derivatives, they were removed from the data set and then tried with the selected machine learning models to investigate whether they make a significant difference in the performance.
 
+- The performance of the selected machine learning models with the refined data is presented in below grid and the  summary is mentioned in Table. 
+- Both train and test scores have decreased but removing (CO)NH₂ outliers from the data set made a significant difference on test scores of all 3 machine learning models. Out of 3 machine learning models, optimized XG Boost model has achieved the best prediction accuracy for unseen data which is 97\%.
+
+![image](xgb_opt_refined.png)
+![image](rf_opt_refined.png)
+![image](bt_opt_refined.png)
+
+|Model|Train R2|Test R2|Train RMSE \(kcal/mol\)|Test RMSE \(kcal/mol\)|
+|---|---|---|---|---|
+|XG Boost|0\.9846|0\.9677|0\.7128|0\.9465|
+|Random Forest|0\.9894|0\.9349|0\.5929|1\.3442|
+|Bagged Tree|0\.9885|0\.9371|0\.6152|1\.3214|
+
+- The majority of (CO)NH₂ derivatives have higher BDE values with lower HOMO energies which implies that (CO)NH₂ stabilizes the complex by acting as electron withdrawing group. 
+- However, this observation appears to contradict our previous work and experimental results, which showed that electron-donating groups stabilize CoCp_2OH derivatives. 
+- Therefore, we conclude that the impact of (CO)NH₂ on the electronic structure of CoCp_2OH is more complex than initially thought. Further investigation is needed to fully understand how (CO)NH₂ impacts the electronic structure and stability of CoCp_2OH.
+
+
 
 
 
