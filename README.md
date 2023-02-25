@@ -2,7 +2,7 @@
 
 Author: Shehani Wetthasinghe
 
-Last modified: 01/03/2023
+Last modified: 02/25/2023
 
 ![afm_aem](https://user-images.githubusercontent.com/50593017/200152591-233aee11-a424-46b4-9a55-d0cfa8bcac7f.png)
 
@@ -70,7 +70,7 @@ https://osf.io/6za8c/
 ## Machine Learning Models
 
 **NOTE:**
-Before applying the machine learning techniquies, I removed derivatives below the DFT accuracy 3 kcal/mol of BDE.
+Before applying the machine learning techniquies, derivatives below the DFT accuracy 3 kcal/mol of BDE were removed.
 
 The following heat map illustrates the correlation between the features of fragments based on the generated data.
 
@@ -87,19 +87,10 @@ First, I tried out few regression machine learning models with the default param
 |SVG|0\.479298|0\.378495|4\.768846|5\.263284|
 |XG Boost|0\.905036|0\.844032|2\.036564|2\.636647|
 
-![image](https://user-images.githubusercontent.com/50593017/200152014-b8e12650-6777-4b09-8cb1-fafc421f1c12.png)
-![image](https://user-images.githubusercontent.com/50593017/200152026-eacfac2c-0493-47d7-b8c5-50ee0fc4ee8e.png)
-![image](https://user-images.githubusercontent.com/50593017/200152031-68c122be-c68c-4947-a9b2-5fd3d0d87eb4.png)
-![image](https://user-images.githubusercontent.com/50593017/200152035-5d050ae3-cc14-49eb-8f10-b21d6690384c.png)
-![image](https://user-images.githubusercontent.com/50593017/200152043-e117e411-5c53-417d-a95e-c03f255b46c5.png)
-![image](https://user-images.githubusercontent.com/50593017/210457193-87d61b1a-4213-4dc0-a284-682f8d3decbf.png)
-![image](https://user-images.githubusercontent.com/50593017/210457210-532ce038-d598-4ad9-a041-d6a967bf9406.png)
-
-- According to the train and test RMSE values for the models;
-  - all models have overfilling issue and decision tree has the highest overfittin problem.
-- Out of these 7 models, XG boost, random forest and bagged tree are selected based on the test R$^2$ score to do further optimizations.
+- Since test R$^2$ scores are very poor compared to train R$^2$ scores, all models are suffering from over-fitting issue and it is also confirmed by the large test RMSE scores over train RMSE.
+- Out of these 7 models, XG Boost, random forest and bagged tree are selected based on the test scores for further optimizations.
  
- The following table illustrates the performence of the models after tunning the hyperparameters and carring out the cross validation (folds = 5);
+ The following table illustrates the performance of the models after tunning the hyperparameters and carrying out the cross validation (folds = 5);
  
 |Model|Train R2|Test R2|Train RMSE \(kcal/mol\)|Test RMSE \(kcal/mol\)|
 |---|---|---|---|---|
@@ -107,22 +98,24 @@ First, I tried out few regression machine learning models with the default param
 |Random Forest|0\.979996|0\.798638|0\.9347|2\.995871|
 |Bagged Tree|0\.980953|0\.801947|0\.912076|2\.971157|
 
-![image](https://user-images.githubusercontent.com/50593017/210457410-143e70a0-ce49-4846-ac13-142f5f54258e.png)
-![image](https://user-images.githubusercontent.com/50593017/210457442-d0795964-28ed-4efe-9ac6-ee690ac29092.png)
-![image](https://user-images.githubusercontent.com/50593017/210457461-2bfcc5df-81cd-4283-bd3e-3ff1ab2c5ec6.png)
+- Out of the optimized models, XG Boost machine learning model is the best performing model by having the highest R$^2$ and lowest RMSE test scores. 
+- Yet, the test scores are lower than the train scores even for the optimized models. 
+![image](xgb_opt.png)
+![image](rt_opt.png)
+![image](bt_opt.png)
 
-
-- **Acording to the performence of optimized models, XG Boost regression model is selected as the best ML model since it gained the highest R<sup>2</sup> score and lowest train and test RMSE scores.**
-
-- But this model is suffering from overfitting, so here I tried few few deep learning models to overcome the overfitting problem.
-- According to the predicted results of every optimized  model, it is observable that the predictions made for the derivatives with actual BDE values greater than 30 kcal/mol produced the higher error and it caused to decrease the testing scores of the models.
-- Therefore, analyzis of outliers is required.
-- The common outliers for all three optimized models were identified by calculating  $\lvert$ Actual BDE - Predicted BDE $\rvert$. Table \ref{tab:ouliers} and  the below figure shows the list top 9 outliers where $\lvert$ Actual BDE - Predicted BDE $\rvert$ $>$ 4 kcal/mol.
+- According to the test results of each model illustrated above, there is a similarity in the pattern of deviated points from the trend line when actual BDE $>$ 30 kcal/mol. 
+- These outliers are the ones which cause to generate lower test scores. Therefore, the deviated derivatives were investigated further. 
+- First, the common outliers for all three optimized models were identified by calculating  $\lvert$ Actual BDE - Predicted BDE $\rvert$. 
+- Below figire, shows the list top 9 outliers where $\lvert$ Actual BDE - Predicted BDE $\rvert$ $>$ 4 kcal/mol.
 ![image](top9_outlier.png)
 
-- 7 out of 9 of these outliers consist with -CONH$_2$ substituent. So next, the distribution of -CONH$_2$ derivatives over input features were analyzed to determine whether it is detected as an outlier at the initial stage.
+- Seven of the nine outliers consist (CO)NH₂	group either in CoCpY$'$ or CpY. Consequently, the (CO)NH₂ derivatives were sliced out and the distribution of the data was re-analyzed across each input feature.
 
 ![image](all_feat_out.png)
+
+
+
 
 
 
