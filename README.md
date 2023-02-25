@@ -87,7 +87,7 @@ First, I tried out few regression machine learning models with the default param
 |SVG|0\.479298|0\.378495|4\.768846|5\.263284|
 |XG Boost|0\.905036|0\.844032|2\.036564|2\.636647|
 
-- Since test R$^2$ scores are very poor compared to train R$^2$ scores, all models are suffering from over-fitting issue and it is also confirmed by the large test RMSE scores over train RMSE.
+- Since test R^2 scores are very poor compared to train R^2 scores, all models are suffering from over-fitting issue and it is also confirmed by the large test RMSE scores over train RMSE.
 - Out of these 7 models, XG Boost, random forest and bagged tree are selected based on the test scores for further optimizations.
  
  The following table illustrates the performance of the models after tunning the hyperparameters and carrying out the cross validation (folds = 5);
@@ -98,7 +98,7 @@ First, I tried out few regression machine learning models with the default param
 |Random Forest|0\.979996|0\.798638|0\.9347|2\.995871|
 |Bagged Tree|0\.980953|0\.801947|0\.912076|2\.971157|
 
-- Out of the optimized models, XG Boost machine learning model is the best performing model by having the highest R$^2$ and lowest RMSE test scores. 
+- Out of the optimized models, XG Boost machine learning model is the best performing model by having the highest R^2 and lowest RMSE test scores. 
 - Yet, the test scores are lower than the train scores even for the optimized models. 
 ![image](xgb_opt.png)
 ![image](rt_opt.png)
