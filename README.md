@@ -145,9 +145,14 @@ First, I tried out few regression machine learning models with the default param
 |Random Forest|0\.9894|0\.9349|0\.5929|1\.3442|
 |Bagged Tree|0\.9885|0\.9371|0\.6152|1\.3214|
 
+## Conclusion
+- The optimized XG Boost can be recommnded as a potential machine learning model to predict the stability of new di-substituted CoCp_2OH derivatives with the best accuracy.
+
+# Future work
 - The majority of (CO)NH₂ derivatives have higher BDE values with lower HOMO energies which implies that (CO)NH₂ stabilizes the complex by acting as electron withdrawing group. 
 - However, this observation appears to contradict our previous work and experimental results, which showed that electron-donating groups stabilize CoCp_2OH derivatives. 
-- Therefore, we conclude that the impact of (CO)NH₂ on the electronic structure of CoCp_2OH is more complex than initially thought. Further investigation is needed to fully understand how (CO)NH₂ impacts the electronic structure and stability of CoCp_2OH.
+- Therefore, the impact of (CO)NH₂ on the electronic structure of CoCp_2OH is more complex than my initially thought. 
+- Further investigation is needed to fully understand how (CO)NH₂ impacts the electronic structure and stability of CoCp_2OH.
 
 
 
