@@ -114,6 +114,23 @@ First, I tried out few regression machine learning models with the default param
 
 ![image](all_feat_out.png)
 
+- As the above figure, the (CO)NH₂ derivatives do not appear as outliers when the entire data set is distributed across each input feature. However, since the input features do not provide a clear indication of (CO)NH₂ derivatives as outliers, it may be necessary to analyze a different property.
+
+- The properties of the substituted CoCp_2OH complex that were not utilized as input features for the machine learning models, but were employed to determine the BDE, as well as the HOMO and LUMO energies of the complex, were analyzed in the subsequent step. The selected properties are listed below;
+
+  - Energy of Co[CpY][CpY']OH 
+  - Energy of CoCpY'energy
+  - CpY energy
+  - BDE (target variable)
+  - HOMO energy of Co[CpY][CpY']OH
+  - LUMO energy of Co[CpY][CpY']OH
+
+![image](complex_feat.png)
+
+![image](bdeVScomplexhomo.png)
+
+- Based on the data presented in above plots, it is evident that (CO)NH₂ derivatives appear as significant outliers in the distribution of HOMO energy of the complex.
+- Due to the peculiar behavior of (CO)NH₂ derivatives, they were removed from the data set and then tried with the selected machine learning models to investigate whether they make a significant difference in the performance.
 
 
 
